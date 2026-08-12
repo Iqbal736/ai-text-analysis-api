@@ -45,7 +45,7 @@ Or in text representation:
 1. **Clone the repository:**
    ```bash
    git clone <your-repository-url>
-   cd google-gemini-fastapi
+   cd ai-text-analysis-api
    ```
 
 2. **Create a virtual environment:**
