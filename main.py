@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Initialize FastAPI app
-app = FastAPI(title="Google Gemini FastAPI", description="A FastAPI wrapper for Google Gemini models")
+app = FastAPI(title="AI Text Analysis API", description="A FastAPI wrapper for Google Gemini models")
 
 # Configure Gemini API
 # It expects the GEMINI_API_KEY environment variable to be set

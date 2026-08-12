@@ -1,6 +1,40 @@
-# Google Gemini FastAPI
+# AI Text Analysis API
 
 A lightweight FastAPI web service that integrates with Google's Gemini API to provide text analysis, summarization, and classification endpoints.
+
+## Architecture Diagram
+
+```mermaid
+flowchart TD
+    API[FastAPI REST API] --> A[Analyze]
+    API --> S[Summarize]
+    API --> C[Classify]
+    
+    A --> G[Gemini]
+    S --> G
+    C --> G
+    
+    G --> J[JSON Response]
+    J --> P[Pytest]
+```
+
+Or in text representation:
+```text
+                 FastAPI REST API
+                       │
+        ┌──────────────┼──────────────┐
+        ↓              ↓              ↓
+     Analyze        Summarize      Classify
+        │              │              │
+        └──────────────┼──────────────┘
+                       ↓
+                    Gemini
+                       ↓
+                 JSON Response
+                       │
+                       ↓
+                    Pytest
+```
 
 ## Prerequisites
 - Python 3.9+
