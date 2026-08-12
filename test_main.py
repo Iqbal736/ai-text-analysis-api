@@ -1,10 +1,10 @@
+import os
+# Set a dummy API key for testing so it doesn't fail the 500 API key check
+os.environ["GEMINI_API_KEY"] = "dummy_key_for_testing"
+
 import pytest
 from fastapi.testclient import TestClient
 from main import app
-import os
-
-# Set a dummy API key for testing so it doesn't fail the 500 API key check
-os.environ["GEMINI_API_KEY"] = "dummy_key_for_testing"
 
 client = TestClient(app)
 
